@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.2</version>
-    <date>2019-07-30T10:53:49Z</date>
+    <date>2019-07-30T12:18:03Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -131,6 +131,22 @@
                             <status>0</status>
                             <priority>1</priority>
                             <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Citrix PVS Disk Replication Status:pvsdisk.getdiskstate[{#DISKLOCATORID}].nodata(2h)}=1</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>PvS Disk Item : {#DISKLOCATORNAME} data not current</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>No Data for this item was receiven in the last 2 hours. Please check the scheduled task!</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
                             <dependencies/>
